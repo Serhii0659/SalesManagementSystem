@@ -1,0 +1,28 @@
+<Window x:Class="SalesManagementSystem.ProductEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редагування товару"
+        Width="350" Height="140"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        xml:lang="uk-UA">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Назва:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox x:Name="NameBox" Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"/>
+        <TextBlock Text="Ціна:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox x:Name="PriceBox" Grid.Row="1" Grid.Column="1" Margin="0,0,0,5"/>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Width="80" Margin="0,10,10,0" IsDefault="True" Click="Ok_Click"/>
+            <Button Content="Відміна" Width="80" Margin="0,10,0,0" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
